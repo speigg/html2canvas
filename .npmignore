@@ -2,6 +2,7 @@ build/
 docs/
 examples/
 scripts/
+src/
 tests/
 www/
 .github/
