@@ -12,12 +12,12 @@ const testRangeBounds = document => {
             const testElement = document.createElement('boundtest');
             testElement.style.height = `${TEST_HEIGHT}px`;
             testElement.style.display = 'block';
-            document.body.appendChild(testElement);
+            document.documentElement.appendChild(testElement);
 
             range.selectNode(testElement);
             const rangeBounds = range.getBoundingClientRect();
             const rangeHeight = Math.round(rangeBounds.height);
-            document.body.removeChild(testElement);
+            document.documentElement.removeChild(testElement);
             if (rangeHeight === TEST_HEIGHT) {
                 return true;
             }
